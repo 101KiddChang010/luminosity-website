@@ -14,6 +14,7 @@ const Hero = () => {
         autoPlay
         loop
         muted
+        playsInline
         className="absolute z-0 w-full h-full object-cover"
         aria-hidden="true"
       >
