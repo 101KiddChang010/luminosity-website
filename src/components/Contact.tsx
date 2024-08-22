@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -9,9 +8,6 @@ const Contact: React.FC = () => {
     email: "",
     message: "",
   });
-  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -23,36 +19,10 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!captchaValue) {
-      setSubmitStatus("Please complete the CAPTCHA");
-      return;
-    }
-    setIsSubmitting(true);
-    setSubmitStatus(null);
-
-    try {
-      const response = await fetch(process.env.GOOGLE_SHEET_SCRIPT_URL!, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ ...formData, captcha: captchaValue }),
-      });
-
-      if (response.ok) {
-        setSubmitStatus("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-        setCaptchaValue(null);
-      } else {
-        setSubmitStatus("Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      setSubmitStatus("An error occurred. Please try again later.");
-    }
-
-    setIsSubmitting(false);
+    // Handle form submission logic here
+    console.log(formData);
   };
 
   return (
@@ -130,32 +100,14 @@ const Contact: React.FC = () => {
                       required
                     ></textarea>
                   </div>
-                  <div className="mb-4">
-                    <ReCAPTCHA
-                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-                      onChange={(value) => setCaptchaValue(value)}
-                    />
-                  </div>
                   <div>
                     <button
                       type="submit"
                       className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                      disabled={isSubmitting}
                     >
-                      {isSubmitting ? "Sending..." : "SUBMIT"}
+                      SUBMIT
                     </button>
                   </div>
-                  {submitStatus && (
-                    <p
-                      className={`mt-4 text-center ${
-                        submitStatus.includes("successfully")
-                          ? "text-green-500"
-                          : "text-red-500"
-                      }`}
-                    >
-                      {submitStatus}
-                    </p>
-                  )}
                 </div>
               </form>
             </div>
