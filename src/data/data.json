@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "desktop": {
+      "src": "/logoDesktop.jpg",
+      "height": 250,
+      "width": 250,
+      "alt": "The logo of Luminosity Web Design, two rings intertwining eachother with the text of Luminosity Web Design to the right of the logo and colorized by a gradient purple and pinkish color, reflecting digital creativity."
+    },
+    "mobile": {
+      "src": "/logo.jpg",
+      "height": 95,
+      "width": 95,
+      "alt": "The logo of Luminosity Web Design, two rings intertwining eachother and characterized by a gradient purple and pinkish color, reflecting digital creativity."
+    },
+    "links": [{ "href": "/", "text": "Home" }],
+    "color": {
+      "bgColorScrolled": "#030b11",
+      "bgColorNotScrolled": "transparent"
+    },
+    "notice": {
+      "noticeMessage": ""
+    },
+    "stickyOrFixed": "fixed"
+  },
+  "scrollUp": {
+    "color": "#CF517C99",
+    "hoverColor": "#A1395c",
+    "activeColor": "",
+    "arrowColor": "#DF97E2"
+  },
+  "footer": {
+    "social": [
+      {
+        "link": "https://www.facebook.com/people/Luminosity-Web-Design",
+        "color": "#1877F2",
+        "icon": "M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+      },
+      {
+        "link": "https://www.linkedin.com/company/luminosity-web-design",
+        "color": "#0077B5",
+        "icon": "M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+      }
+    ],
+    "email": "",
+    "clientWebsite": "",
+    "bgColor": "#252525"
+  },
+  "hero": {
+    "title": "Luminosity Web Design",
+    "message": "Transforming your online presence with personalized websites that enriches and empowers",
+    "button": {
+      "active": 0,
+      "text": "Contact Us",
+      "link": ""
+    }
+  },
+  "services": {
+    "title": "Our Design Services",
+    "type": [
+      {
+        "bgColor": "",
+        "title": "Custom Website Designs",
+        "alt": "A person draws a flowchart on paper with a pencil, depicting a sequence of boxes and arrows for a website",
+        "icon": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "Our focus on creating unique, tailored websites will reflect your brand’s identity and meet your specific needs. We craft each aspect to align with your vision and goals. By understanding your brand’s personality and objectives, we ensure that every design not only stands out but also resonates with your target audience."
+      },
+      {
+        "bgColor": "bg-pink-950",
+        "title": "Search Engine Optimization (SEO)",
+        "alt": "Three white Scrabble tiles on a wooden surface spell out SEO",
+        "icon": "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "description": "SEO is the technical art of enhancing your website’s visibility in search engine result pages such as Google. We involve a range of strategies and techniques aimed at improving your site’s ranking on search engines in order to gain more visiblity, which ultimately attracts more organic traffic to your site."
+      },
+      {
+        "bgColor": "",
+        "title": "Website Maintenance & Support",
+        "alt": "A close up of a computer screen with many lines of text that looks like programming",
+        "icon": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "description": "Your website is a crucial asset, and ensuring it runs smoothly is essential for your continued success. At Luminosity Web Design, our maintenance & support plans are designed to keep your website in top shape, offering you peace of mind."
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Our Design Services",
+    "icon": "https://cdn-icons-png.flaticon.com/128/1055/1055666.png",
+    "alt": "Illustration of a computer screen displaying a software interface for graphic design or editing with icons and a cursor dragging an object.",
+    "type": [
+      {
+        "title": "Valley Construction",
+        "location": "Seattle, WA",
+        "buttonText": "VISIT VALLEY",
+        "image": "",
+        "description": "Valley Construction Supply is the largest privately held construction supply company in Seattle, WA for over 35 years."
+      }
+    ]
+  },
+  "Contact": {},
+  "primaryColor": "#8726CC",
+  "secondaryColor": "#CF517C"
+}
