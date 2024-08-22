@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Team from "./team";
+import Team from "./Team";
 import Data from "@/data/data.json";
 
 const Page: React.FC = () => {
