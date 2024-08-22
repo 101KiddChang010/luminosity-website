@@ -10,7 +10,7 @@ export default function Service() {
       {services.type.map((service, index) => (
         <React.Fragment key={service.description}>
           <div
-            className={`flex flex-col md:flex-row text-white ${service.bgColor} px-8 py-6`}
+            className={`z-50 flex flex-col md:flex-row text-white ${service.bgColor} px-8 py-6`}
           >
             <div className="max-md:pb-8 md:w-1/2 md:pr-8 flex flex-col justify-center">
               <h2 className="text-3xl lg:text-4xl font-bold mb-4">

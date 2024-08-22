@@ -26,7 +26,6 @@ Link: https://www.framer.com/motion/
 Github: https://github.com/framer/motion
 
 /* ICONS */
-Source: Flaticon
 Author: Freepik
 License: Flaticon License
 Link: https://www.flaticon.com/free-icon/contact-information_14946653
@@ -37,7 +36,7 @@ Author: olenchic
 License: Pixabay content license
 Link: https://pixabay.com/videos/particles-rays-wallpaper-background-214405/
 
-source: Unsplash
+Source: Unsplash
 Author: Kelly Sikkema
 License: Unsplash License
 Link: https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D

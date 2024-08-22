@@ -4,20 +4,17 @@ import Data from "@/data/data.json";
 
 const Page: React.FC = () => {
   return (
-    <div className="bg-white text-gray-800">
-      <h2 className="text-center font-bold text-5xl p-8 text-black">
+    <div
+      className=" text-white pt-12"
+      style={{
+        background: "linear-gradient(to bottom, #161616 1%, #160620 30%)",
+      }}
+    >
+      <div className="flex justify-center"></div>
+      <h2 className="text-center font-bold text-5xl pb-8 text-white">
         {Data.portfolio.title}
       </h2>
-      <div className="flex justify-center mb-8">
-        <Image
-          src="https://cdn-icons-png.flaticon.com/128/1055/1055666.png"
-          alt={Data.portfolio.alt}
-          width={100}
-          height={100}
-          className=""
-          unoptimized
-        />
-      </div>
+      <hr className="mx-8 border-[#ffffff50] border" />
       <Portfolio />
     </div>
   );

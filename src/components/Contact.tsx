@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,9 @@ const Contact: React.FC = () => {
     email: "",
     message: "",
   });
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -19,14 +23,45 @@ const Contact: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission logic here
-    console.log(formData);
+    if (!captchaValue) {
+      setSubmitStatus("Please complete the CAPTCHA");
+      return;
+    }
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch(process.env.GOOGLE_SHEET_SCRIPT_URL!, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...formData, captcha: captchaValue }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+        setCaptchaValue(null);
+      } else {
+        setSubmitStatus("Failed to send message. Please try again.");
+      }
+    } catch (error) {
+      setSubmitStatus("An error occurred. Please try again later.");
+    }
+
+    setIsSubmitting(false);
   };
 
   return (
-    <div className="bg-[#030b11] py-12 px-4 sm:px-6 lg:px-8">
+    <div
+      className="py-12 px-4 sm:px-6 lg:px-8"
+      style={{
+        background: "linear-gradient(to bottom, #030b11 5%, #252525 30%)",
+      }}
+    >
       <div className="max-w-4xl mx-auto">
         <div className="bg-gradient-to-br from-[#111827] to-[#1f2937] rounded-lg shadow-gray-900 shadow-[0_0_20px_10px] overflow-hidden">
           <div>
@@ -95,14 +130,32 @@ const Contact: React.FC = () => {
                       required
                     ></textarea>
                   </div>
+                  <div className="mb-4">
+                    <ReCAPTCHA
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                      onChange={(value) => setCaptchaValue(value)}
+                    />
+                  </div>
                   <div>
                     <button
                       type="submit"
                       className="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                      disabled={isSubmitting}
                     >
-                      SUBMIT
+                      {isSubmitting ? "Sending..." : "SUBMIT"}
                     </button>
                   </div>
+                  {submitStatus && (
+                    <p
+                      className={`mt-4 text-center ${
+                        submitStatus.includes("successfully")
+                          ? "text-green-500"
+                          : "text-red-500"
+                      }`}
+                    >
+                      {submitStatus}
+                    </p>
+                  )}
                 </div>
               </form>
             </div>

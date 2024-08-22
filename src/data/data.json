@@ -43,7 +43,7 @@
     ],
     "email": "",
     "clientWebsite": "",
-    "bgColor": "#252525"
+    "bgColor": "#111111"
   },
   "hero": {
     "title": "Luminosity Web Design",
@@ -55,7 +55,7 @@
     }
   },
   "services": {
-    "title": "Our Design Services",
+    "title": "Our Services",
     "type": [
       {
         "bgColor": "",
@@ -65,7 +65,7 @@
         "description": "Our focus on creating unique, tailored websites will reflect your brand’s identity and meet your specific needs. We craft each aspect to align with your vision and goals. By understanding your brand’s personality and objectives, we ensure that every design not only stands out but also resonates with your target audience."
       },
       {
-        "bgColor": "bg-pink-950",
+        "bgColor": "",
         "title": "Search Engine Optimization (SEO)",
         "alt": "Three white Scrabble tiles on a wooden surface spell out SEO",
         "icon": "https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -81,16 +81,51 @@
     ]
   },
   "portfolio": {
-    "title": "Our Design Services",
-    "icon": "https://cdn-icons-png.flaticon.com/128/1055/1055666.png",
-    "alt": "Illustration of a computer screen displaying a software interface for graphic design or editing with icons and a cursor dragging an object.",
+    "title": "Our Portfolio",
     "type": [
       {
-        "title": "Valley Construction",
-        "location": "Seattle, WA",
-        "buttonText": "VISIT VALLEY",
-        "image": "",
-        "description": "Valley Construction Supply is the largest privately held construction supply company in Seattle, WA for over 35 years."
+        "title": "Robert Taylor Construction",
+        "location": "Richmond, VA",
+        "buttonText": "VISIT WEBSITE",
+        "image": "./roberttaylor.jpg",
+        "link": "https://roberttaylorconstruction.com",
+        "description": "Robert Taylor construction services is a privately held construction business in Richmond, VA."
+      },
+      {
+        "title": "CuraAI",
+        "location": "Landing Page",
+        "buttonText": "VISIT WEBSITE",
+        "image": "./curaai.jpg",
+        "link": "https://curaai.netlify.app",
+        "description": "CuraAI is an innovative medical assistant AI designed to assist you with personalized medical advice and connect you with the best healthcare providers."
+      },
+      {
+        "title": "Aidan Arpachinda",
+        "location": "Digital Portfolio",
+        "buttonText": "VISIT WEBSITE",
+        "image": "./aidan.jpg",
+        "link": "https://aidanarpachinda.netlify.app",
+        "description": "Explore Aidan Arpachinda's digial portfolio, a simple and sleek showcase of his expertise and unique capabilities."
+      }
+    ]
+  },
+  "team": {
+    "title": "Our Team",
+    "type": [
+      {
+        "name": "Kidd Chang",
+        "role": "FOUNDER",
+        "image": "https://media.licdn.com/dms/image/v2/D5603AQEfdRVuQSv_1g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1682030231579?e=1729728000&v=beta&t=nbmBAOGca9BcMvczGgNrKIuZea-yiTgF9F5NvaVRtj0",
+        "socialMedia": [
+          {
+            "type": "linkedin",
+            "url": "https://www.linkedin.com/in/kidd-chang"
+          },
+          {
+            "type": "github",
+            "url": "https://github.com/101kiddchang010"
+          }
+        ]
       }
     ]
   },
