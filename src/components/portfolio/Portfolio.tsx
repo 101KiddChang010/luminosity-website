@@ -19,7 +19,7 @@ export default function Portfolio() {
                   src={item.image}
                   alt={item.title}
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                   className="rounded-lg"
                   unoptimized
                 />

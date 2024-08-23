@@ -12,7 +12,7 @@ export default function Team() {
         {team.type.map((item, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col items-center p-6"
+            className="bg-white shadow-white shadow-[0_0_10px_5px] rounded-lg overflow-hidden flex flex-col items-center p-6"
           >
             <div className="w-32 h-32 relative mb-4">
               <Image
