@@ -87,7 +87,7 @@
         "title": "Robert Taylor Construction",
         "location": "Richmond, VA",
         "buttonText": "VISIT WEBSITE",
-        "image": "./roberttaylor.jpg",
+        "image": "/roberttaylor.JPG",
         "link": "https://roberttaylorconstruction.com",
         "description": "Robert Taylor construction services is a privately held construction business in Richmond, VA."
       },
@@ -95,7 +95,7 @@
         "title": "CuraAI",
         "location": "Landing Page",
         "buttonText": "VISIT WEBSITE",
-        "image": "./curaai.jpg",
+        "image": "/curaai.JPG",
         "link": "https://curaai.netlify.app",
         "description": "CuraAI is an innovative medical assistant AI designed to assist you with personalized medical advice and connect you with the best healthcare providers."
       },
@@ -103,7 +103,7 @@
         "title": "Aidan Arpachinda",
         "location": "Digital Portfolio",
         "buttonText": "VISIT WEBSITE",
-        "image": "./aidan.jpg",
+        "image": "/aidan.JPG",
         "link": "https://aidanarpachinda.netlify.app",
         "description": "Explore Aidan Arpachinda's digial portfolio, a simple and sleek showcase of his expertise and unique capabilities."
       }
